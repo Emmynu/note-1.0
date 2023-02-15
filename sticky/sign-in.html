@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Sign In</title>
+        <link rel="stylesheet" href="styles/sign-in.css">
+        <link rel="stylesheet" href="responsiveness.css">
+        <script src="sign-in.js"></script>
+    </head>
+    <body>
+        <div>
+            <div class="sign-in">
+                <label for="text">Name : </label><br>
+                <input type="text" name="text" id="text" required><br>
+                <span>
+                    <p id="isValid">valid &#10003;</p>
+                    <p id="isInvalid">Invalid Username</p>
+                </span><br>
+                <label for="password">Password :</label><br>
+                <input type="password" name="passord" id="password" required><br>
+                <p id="isValid1">valid &#10003;</p>
+                <p id="isInvalid1">Invalid Password </p><br>
+               <button onclick="user()" id="button">Sign In</button>
+               
+            </div>
+        </div>
+    </body>
+</html>

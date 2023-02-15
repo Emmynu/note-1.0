@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Notes</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="responsiveness.css">
+    </head>
+    <body id="body2">
+        <!--body-->
+    <div class="overall" id="overall">
+        <div class="body" id="body">
+            <nav class="nav-bar">
+                <div>
+                    <img src="icons/add.png" alt="" onclick="createNewNote()" ondblclick="removeNote()" id="add">
+                </div>
+                <div>
+                    <img src="icons/pngwing.com (20).png" alt="" onclick="settings()" style="background-color: gray; border-radius: 50%; border: 2px solid gray;" id="add1">
+                    <img src="icons/pngwing.com (23).png" alt="" onclick="deleteAll()" height="30px" style="margin-top: -10px;margin-right: 5px; background-color: gray; border-radius:50%;border: 2px solid gray;" class="add2">
+                </div>
+        </nav>
+       <main>
+             <div class="head">
+                <h1 class="h1">Quick Notes</h1>
+                <div style="display: flex; align-items: center;">
+                    <input type="search" name="search" id="search" placeholder="Search...">
+                    <img src="icons/search (1).png" alt="" width="30px" class="input-img">
+                </div>
+             </div>
+             <div>
+                <div id="textholder"></div>
+                <div id="preText">
+                    <img class="preText-img"src="icons/pngwing.com (22).png" alt="" width="200px" style="margin-left: 25%; margin-top: 30px; cursor: pointer; user-select: none;">
+                    <p class="text">Tap the new note button to create a new note</p>
+                </div>
+             </div>
+       </main>
+        </div>
+        <!--Note-->
+
+        <div class="body2">
+            <nav class="nav">
+                <div class="div1">
+                    <button onclick="save()">+</button>
+                </div>
+                <div class="div2">
+                    <button onclick="palette()">...</button>
+                    <button onclick="removeNote()">X</button>
+                </div>
+            </nav>
+                <div>
+                    <div class="palette">
+                        <div class="palette1" onclick="yellow()"></div>
+                        <div class="palette2" onclick="green()"></div>
+                        <div class="palette3" onclick="pink()"></div>
+                        <div class="palette4" onclick="purple()"></div>
+                        <div class="palette5" onclick="blue()"></div>
+                        <div class="palette6" onclick="gray()"></div>
+                        <div class="palette7" onclick="black()"></div>
+                    </div>
+                        <button class="palette-btn" onclick="closePalette()">Close palette</button>    
+                </div>
+                <!-- -->
+                <div>
+                    <input type="text" name="text" id="input" placeholder="Take a note" onkeyup="text(this)">
+                </div>
+        </div>
+     <!--settings-->
+    </div>
+    <div  class="set">
+        <nav style="display: flex; justify-content: space-between; color: white; margin-top: 10px; margin-left: 10px; margin-right: 10px;">
+            <div class="settings">Settings</div>
+            <div class="settings" onclick="x()" style="cursor: pointer;">X</div>
+        </nav>
+        <div style="margin-top: 40px;  border-bottom: 1px solid rgb(52, 52, 52);padding-bottom: 20px;">
+            <h4 class="sign">Sign up to sync your notes to the cloud</h4>
+            <button class="sign-btn" onclick="window.location.href='sign-in.html'">Sign Up</button>
+        </div>
+
+        <div style="margin-top: 20px; border-bottom: 1px solid rgb(52, 52, 52);padding-bottom: 20px;">
+            <h3 class="h3" style="margin-left: 10px; font-size: 27px;">Mode</h3>
+            <button class="light" onclick="dark()">Dark Mode</button>
+            <button class="light" onclick="light()">Light Mode</button>
+        </div>
+
+        <div style="margin-top: 40px;  border-bottom: 1px solid rgb(52, 52, 52);padding-bottom: 23px;">
+            <Label for="radio" style="font-size: 18px; margin-bottom: 10px;">Do You want to delete your account</Label>
+            <button class="light" onclick="yes()">Yes</button>
+            <button  class="light">No</button>
+        </div>
+
+        <div class="rateus">
+            <h1 class="rate">Rate Us</h1>
+            <div class="rate-images">
+               <button class="button2" onclick="angry()">😡</button>
+               <button class="button2" onclick="notHappy()">🙁</button>
+               <button class="button2" onclick="good()">🙂</button>
+               <button class="button2" onclick="excellent()">🤩</button>
+            </div>
+
+        </div>
+    </div>
+    <div style="display: flex; color: transparent;">
+        <div id="angry" style="font-size: 20px; margin-left: 2px;  display: none;">0</div>
+        <div id="nothappy" style="font-size: 20px; margin-left: 2px;  display: none;">0</div>
+        <div id="good" style="font-size: 20px; margin-left: 2px;  display: none;">0</div>
+        <div id="excellent" style="font-size: 20px; margin-left: 2px;  display: none;">0</div>
+    </div>
+    </body>
+</html>
